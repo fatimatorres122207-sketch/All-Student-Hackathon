@@ -1,0 +1,129 @@
+body {
+    background: linear-gradient(to bottom right, #4c44ef, #db64ff);
+    box-sizing: border-box;
+    color: white;
+    font-family: "Roboto Mono", sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2");
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.header-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.header-container,
+.logo-container {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: clamp(1rem, 5vw, 2rem);
+}
+
+.logo-container {
+    left: 2rem;
+    padding: 10px;
+    position: absolute;
+    top: 2rem;
+    z-index: 10;
+}
+
+.logo-container img {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    max-width: 64px;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.countdown {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cta {
+    margin: 2rem auto;
+}
+
+.cta a {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10000px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+
+.cta a:hover {
+    background: #ffffff;
+    color: #333333;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+section {
+    list-style-position: inside;
+    padding: 2rem;
+}
+
+.info-box {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 800px;
+    padding: clamp(1rem, 5vw, 2rem);
+}
+
+.info-box ul {
+    margin: 0;
+    padding: 1rem;
+}
+
+.info-box li {
+    margin-bottom: 1rem;
+    padding: 0;
+    text-align: left;
+}
+
+.info-box li:last-child {
+    margin-bottom: 0;
+}
