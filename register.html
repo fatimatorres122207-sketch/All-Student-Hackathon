@@ -4,9 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Register · All Student Hackathon</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header small">
     <div class="container header-grid">
       <div class="brand">
@@ -20,13 +24,14 @@
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="container narrow">
     <section class="page-intro">
       <h2>Register</h2>
       <p>Fill out the form below to reserve your spot. Fields marked <span class="required">*</span> are required.</p>
     </section>
 
-    <form class="form" id="registrationForm" onsubmit="handleSubmit(event)">
+    <form class="form info-box" id="registrationForm" onsubmit="handleSubmit(event)">
       <label>
         Full name <span class="required">*</span>
         <input type="text" name="name" required />
@@ -66,21 +71,13 @@
         <a href="index.html" class="button ghost">Cancel</a>
       </div>
 
-      <p class="small muted">This form is front-end only. To make registrations live, hook the form to your preferred backend, Google Forms, or Airtable.</p>
+      <p class="small muted">
+        This form is front-end only. To make registrations live, hook the form to your preferred backend, Google Forms, or Airtable.
+      </p>
     </form>
   </main>
 
-
-
-
-
-
-
-
-
-
-
-  
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -91,11 +88,14 @@
   </footer>
 
   <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form submit demo
     function handleSubmit(e) {
       e.preventDefault();
       const form = e.target;
-      // Basic front-end confirmation. Replace with real submission logic.
-      alert('Thanks! Your registration has been received (demo). If you want real registration, connect the form to a backend or Google Form.');
+      alert('✅ Thanks! Your registration has been received (demo). Connect this form to a backend, Google Form, or Airtable to make it live.');
       form.reset();
     }
   </script>
