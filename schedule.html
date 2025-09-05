@@ -4,9 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Schedule · All Student Hackathon</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header small">
     <div class="container header-grid">
       <div class="brand">
@@ -20,6 +24,7 @@
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
     <section class="page-intro">
       <h2>Event Schedule — 12 Hours</h2>
@@ -27,7 +32,7 @@
     </section>
 
     <section class="timeline">
-      <div class="time-item">
+      <div class="time-item info-box">
         <div class="time">09:00</div>
         <div class="detail">
           <h4>Check-in & Breakfast</h4>
@@ -35,7 +40,7 @@
         </div>
       </div>
 
-      <div class="time-item">
+      <div class="time-item info-box">
         <div class="time">10:00</div>
         <div class="detail">
           <h4>Kickoff & Team Formation</h4>
@@ -43,7 +48,7 @@
         </div>
       </div>
 
-      <div class="time-item">
+      <div class="time-item info-box">
         <div class="time">10:30 → 19:00</div>
         <div class="detail">
           <h4>Build Session (Core)</h4>
@@ -51,7 +56,7 @@
         </div>
       </div>
 
-      <div class="time-item">
+      <div class="time-item info-box">
         <div class="time">19:00</div>
         <div class="detail">
           <h4>Project Demos & Judging</h4>
@@ -59,7 +64,7 @@
         </div>
       </div>
 
-      <div class="time-item">
+      <div class="time-item info-box">
         <div class="time">20:00</div>
         <div class="detail">
           <h4>Awards & Closing</h4>
@@ -69,10 +74,12 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <p>All Student Hackathon — NewBoCo</p>
+        <p><strong>All Student Hackathon</strong> — NewBoCo</p>
+        <p>© <span id="year"></span> All Student Hackathon</p>
       </div>
       <div class="footer-links">
         <a href="index.html">Home</a>
@@ -80,5 +87,19 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Highlight active nav
+    const anchors = document.querySelectorAll('.nav-link');
+    anchors.forEach(a => {
+      if (a.href === location.href || a.getAttribute('href') === location.pathname.split('/').pop()) {
+        a.classList.add('active');
+      }
+    });
+  </script>
 </body>
 </html>
+
