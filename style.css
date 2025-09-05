@@ -9,8 +9,8 @@ body {
 
 header {
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2");
+    background: linear-gradient(rgba(13, 33, 73, 0.9), rgba(59, 130, 246, 0.8));
+
     background-position: center;
     background-size: cover;
     box-sizing: border-box;
