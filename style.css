@@ -141,3 +141,39 @@ h2, h3, h4 {
   padding: 2rem;
   margin-top: 4rem;
 }
+
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem auto;
+  max-width: 800px;
+}
+
+.time-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.time-item .time {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
+  min-width: 90px;
+  text-align: right;
+}
+
+.time-item .detail h4 {
+  margin: 0 0 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.time-item .detail p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
