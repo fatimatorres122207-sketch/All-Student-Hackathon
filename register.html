@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register · All Student Hackathon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <div class="container header-grid">
+      <div class="brand">
+        <h1>All Student Hackathon</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="schedule.html" class="nav-link">Schedule</a>
+        <a href="register.html" class="nav-link active cta">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <section class="page-intro">
+      <h2>Register</h2>
+      <p>Fill out the form below to reserve your spot. Fields marked <span class="required">*</span> are required.</p>
+    </section>
+
+    <form class="form" id="registrationForm" onsubmit="handleSubmit(event)">
+      <label>
+        Full name <span class="required">*</span>
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Email <span class="required">*</span>
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        School / Grade (or college)
+        <input type="text" name="school" />
+      </label>
+
+      <label>
+        Team preference
+        <select name="teamPref">
+          <option value="solo">Work solo</option>
+          <option value="bringTeam">Bring teammate</option>
+          <option value="beMatched">Match me at event</option>
+        </select>
+      </label>
+
+      <label>
+        Brief project idea (optional)
+        <textarea name="idea" rows="4" placeholder="Describe your idea in 1–2 sentences"></textarea>
+      </label>
+
+      <label>
+        Accessibility needs / dietary restrictions
+        <input type="text" name="needs" placeholder="e.g. gluten-free, mobility assistance" />
+      </label>
+
+      <div class="form-actions">
+        <button class="button primary" type="submit">Submit Registration</button>
+        <a href="index.html" class="button ghost">Cancel</a>
+      </div>
+
+      <p class="small muted">This form is front-end only. To make registrations live, hook the form to your preferred backend, Google Forms, or Airtable.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>Questions? Email <a href="mailto:hello@newboco.org">hello@newboco.org</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      // Basic front-end confirmation. Replace with real submission logic.
+      alert('Thanks! Your registration has been received (demo). If you want real registration, connect the form to a backend or Google Form.');
+      form.reset();
+    }
+  </script>
+</body>
+</html>
