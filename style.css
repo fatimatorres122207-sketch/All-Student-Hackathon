@@ -13,11 +13,16 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(13, 33, 73, 0.9), rgba(59, 130, 246, 0.8));
+  background: linear-gradient(
+    rgba(156, 13, 56, 0.9),   /* semi-transparent deep purple (#9C0D38) */
+    rgba(13, 33, 73, 0.8)     /* semi-transparent dark blue (#0D2149) */
+  );
   min-height: 100vh;
   padding: 2rem;
   position: relative;
 }
+
+
 
 .logo-container {
   position: absolute;
