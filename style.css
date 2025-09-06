@@ -180,21 +180,103 @@ h2, h3, h4 {
   max-width: 800px;
 }
 
-.time-item {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  align-items: flex-start;
-  padding: 1.5rem;
+/* Logo Container */
+.logo-container {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: #0D2149; /* solid card */
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 
+    6px 6px 15px rgba(0,0,0,0.6), 
+    -3px -3px 8px rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.time-item .time {
-  font-family: "Roboto Mono", monospace;
-  font-weight: bold;
-  font-size: 1.2rem;
-  min-width: 90px;
-  text-align: right;
+
+
+
+
+
+
+
+
+/* Logo Container */
+.logo-container {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: #0D2149; /* solid card */
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 
+    6px 6px 15px rgba(0,0,0,0.6), 
+    -3px -3px 8px rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.logo-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    8px 8px 18px rgba(0,0,0,0.7), 
+    -4px -4px 10px rgba(255,255,255,0.05);
+}
+
+
+/* Info Grid Cards */
+.info {
+  background: #0D2149;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 
+    8px 8px 20px rgba(0,0,0,0.6), 
+    -4px -4px 12px rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    12px 12px 25px rgba(0,0,0,0.7), 
+    -6px -6px 15px rgba(255,255,255,0.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Timeline Items */
+.time-item {
+  background: #0D2149;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 
+    6px 6px 15px rgba(0,0,0,0.55), 
+    -3px -3px 8px rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.time-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    10px 10px 20px rgba(0,0,0,0.65), 
+    -5px -5px 12px rgba(255,255,255,0.05);
+}
+
+
+
+
+
+
+
 
 .time-item .detail h4 {
   margin: 0 0 0.5rem;
