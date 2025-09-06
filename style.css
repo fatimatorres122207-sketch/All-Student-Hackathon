@@ -2,7 +2,7 @@
 body {
   background: linear-gradient(to bottom right, #9C0D38, #0D2149);
   color: white;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   text-align: center;
 }
@@ -61,12 +61,12 @@ header {
 
 /* Headings */
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bebas Nenu", sans-serif;
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 h2, h3, h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bebas Nenu", sans-serif;
 }
 
 /* Countdown */
