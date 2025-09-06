@@ -34,64 +34,88 @@
 
 
 
+
+
+
+    
+
+
+
+
+
+
+
+
 <form class="form info-box" 
-      action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" 
+      action="https://docs.google.com/forms/d/e/1Nd-mWWoPW15Lqd20a2UafV1re2kDAQKHBkmXuokGC0w/formResponse" 
       method="POST" 
       target="_blank">
 
+  <label>
+    Full name <span class="required">*</span>
+    <input type="text" name="entry.1045781291" required />
+  </label>
+
+  <label>
+    Email <span class="required">*</span>
+    <input type="email" name="entry.2005620554" required />
+  </label>
+
+  <label>
+    School / Grade (or college)
+    <input type="text" name="entry.839337160" />
+  </label>
+
+  <label>
+    Team preference
+    <select name="entry.1045781291">
+      <option value="solo">Work solo</option>
+      <option value="bringTeam">Bring teammate</option>
+      <option value="beMatched">Match me at event</option>
+    </select>
+  </label>
+
+  <label>
+    Brief project idea (optional)
+    <textarea name="entry.839337160" rows="4" placeholder="Describe your idea in 1–2 sentences"></textarea>
+  </label>
+
+  <label>
+    Accessibility needs / dietary restrictions
+    <input type="text" name="entry.839337160" placeholder="e.g. gluten-free, mobility assistance" />
+  </label>
+
+  <div class="form-actions">
+    <button class="button primary" type="submit">Submit Registration</button>
+    <a href="index.html" class="button ghost">Cancel</a>
+  </div>
+
+  <p class="small muted">
+    This form is front-end only. To make registrations live, hook the form to your preferred backend, Google Forms, or Airtable.
+  </p>
+</form>
 
 
 
-  
-
-
-<label>
-  Full name <span class="required">*</span>
-  <input type="text" name="entry.123456789" required />
-</label>
 
 
 
-  
 
-      <label>
-        Email <span class="required">*</span>
-        <input type="email" name="email" required />
-      </label>
 
-      <label>
-        School / Grade (or college)
-        <input type="text" name="school" />
-      </label>
 
-      <label>
-        Team preference
-        <select name="teamPref">
-          <option value="solo">Work solo</option>
-          <option value="bringTeam">Bring teammate</option>
-          <option value="beMatched">Match me at event</option>
-        </select>
-      </label>
 
-      <label>
-        Brief project idea (optional)
-        <textarea name="idea" rows="4" placeholder="Describe your idea in 1–2 sentences"></textarea>
-      </label>
 
-      <label>
-        Accessibility needs / dietary restrictions
-        <input type="text" name="needs" placeholder="e.g. gluten-free, mobility assistance" />
-      </label>
 
-      <div class="form-actions">
-        <button class="button primary" type="submit">Submit Registration</button>
-        <a href="index.html" class="button ghost">Cancel</a>
-      </div>
 
-      <p class="small muted">
-        This form is front-end only. To make registrations live, hook the form to your preferred backend, Google Forms, or Airtable.
-      </p>
-    </form>
+
+
+
+
+
+
+
+
+    
   </main>
 
   <!-- FOOTER -->
