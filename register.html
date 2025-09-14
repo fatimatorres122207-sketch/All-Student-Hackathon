@@ -22,13 +22,12 @@
   <!-- HEADER -->
 
 <header>
+
   <div class="logo-container">
     <a href="index.html" class="clearnav">
       <img src="logo.png" alt="All Student Hackathon Logo" class="logo"/>
     </a>
   </div>
-
-
 
 
 
@@ -80,14 +79,6 @@
 
 
 
-      
-
-
-
-
-
-
-    
 
 
 
@@ -97,10 +88,10 @@
 
 
 
+  
 
-
-
-  <main class="container narrow">
+  <!-- MAIN CONTENT -->
+  <main class="container">
     <section class="page-intro">
       <h2>Register</h2>
       <p>Fill out the form below to reserve your spot. All submissions are handled by Google Forms.</p>
@@ -108,13 +99,7 @@
 
 
 
-
-
-
-
-
-
-
+   
 
 
 <section class="info-box" style="max-width:800px; margin:2rem auto; padding:2rem;">
@@ -127,20 +112,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    
-
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -150,28 +121,21 @@
     </div>
   </footer>
 
+
+
+  
+
   <script>
-    // Year
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Form submit demo
-    function handleSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      alert('✅ Thanks! Your registration has been received (demo). Connect this form to a backend, Google Form, or Airtable to make it live.');
-      form.reset();
-    }
-    function handleSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      // Basic front-end confirmation. Replace with real submission logic.
-      alert('Thanks! Your registration has been received (demo). If you want real registration, connect the form to a backend or Google Form.');
-      form.reset();
-    }
-
-    
-    document.getElementById('year').textContent = new Date().getFullYear();
-    
+    // Highlight active nav
+    const anchors = document.querySelectorAll('.nav-link');
+    anchors.forEach(a => {
+      if (a.href === location.href || a.getAttribute('href') === location.pathname.split('/').pop()) {
+        a.classList.add('active');
+      }
+    });
   </script>
 </body>
 </html>
