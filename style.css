@@ -506,8 +506,8 @@ h2, h3, h4 {
 
 
 .social-link {
-  font-weight: 300;        /* makes it thinner */
-  font-size: 1rem;         /* adjust size if you want smaller */
+  font-weight: 100;        /* makes it thinner */
+  font-size: .9rem;         /* adjust size if you want smaller */
   color: white;            /* clean white text */
   text-decoration: none;   /* removes underline */
   letter-spacing: 0.5px;   /* subtle spacing */
