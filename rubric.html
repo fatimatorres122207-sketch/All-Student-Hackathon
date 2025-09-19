@@ -230,8 +230,18 @@ border: 2px solid #0D2149;
 
 
 
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-
+    // Highlight active nav
+    const anchors = document.querySelectorAll('.nav-link');
+    anchors.forEach(a => {
+      if (a.href === location.href || a.getAttribute('href') === location.pathname.split('/').pop()) {
+        a.classList.add('active');
+      }
+    });
+  </script>
 
 
 
