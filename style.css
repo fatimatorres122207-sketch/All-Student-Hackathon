@@ -81,29 +81,6 @@ header {
 
 
 
-/* Keep your existing .nav and .nav-link styles */
-
-.clearnav {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  border: none;              /* remove border */
-  background: transparent;   /* keep it clear */
-  transition: background 0.3s, opacity 0.3s;
-}
-
-.clearnav:hover {
-  background: none;
-
-}
-
-.clearnav.active {
-  background: none; /* stays clear even when active */
-  color: white;     /* consistent color */
-}
-
 
 
 
@@ -508,4 +485,32 @@ h2, h3, h4 {
 
 .social-link:hover {
   color: #ccc; /* subtle hover change, still clean */
+
+
+
+
+
+/* Keep your existing .nav and .nav-link styles */
+
+.clearnav {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: none;              /* remove border */
+  background: transparent;   /* keep it clear */
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.clearnav:hover {
+  background: none;
+
+}
+
+.clearnav.active {
+  background: none; /* stays clear even when active */
+  color: white;     /* consistent color */
+}
+  
 }
