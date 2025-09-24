@@ -28,7 +28,69 @@
     </a>
   </div>
 
+<style>
 
+/* Contact Form Styling */
+#contact {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form .form-group {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-submit:hover {
+  background-color: #004dcc;
+}
+
+
+
+
+
+
+  
+</style>
 
 
 
@@ -98,24 +160,30 @@
 
 
 
-  
-<section id="get-involved">
 
 
 
-  
-  <section id="contact">
-  <h2>Submit Your Project</h2>
-<form action="https://formspree.io/f/xzzawjyg" method="POST">
-    <input type="text" name="name" placeholder="Team Name" required />
-    <input type="text" name="name" placeholder="Team Members Names First and Last" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Project Link" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <section id="contact" class="info-box">
+  <div class="container contact-container">
+    <h2>Submit Your Project</h2>
+    <form action="https://formspree.io/f/xzzawjyg" method="POST" class="contact-form">
+      <div class="form-group">
+        <input type="text" name="team-name" placeholder="Team Name" required />
+      </div>
+      <div class="form-group">
+        <input type="text" name="team-members" placeholder="Team Members (First & Last Names)" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <textarea name="project-link" placeholder="Project Link (GitHub, Glitch, etc.)" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Submit Project</button>
+    </form>
+  </div>
 </section>
 
-  
 
 
 
