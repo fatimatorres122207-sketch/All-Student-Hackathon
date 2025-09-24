@@ -1,4 +1,11 @@
-const eventDate = new Date("2025-12-06T10:00:00").getTime();
+const { DateTime } = require("luxon");
+
+const eventDate = DateTime.fromObject(
+  { year: 2025, month: 12, day: 6, hour: 10, minute: 0 },
+  { zone: 'America/Chicago' }
+).toMillis();
+
+console.log(eventDate);
 const countdown = document.getElementById("countdown");
 
 function updateCountdown() {
