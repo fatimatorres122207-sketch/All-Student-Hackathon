@@ -28,70 +28,6 @@
     </a>
   </div>
 
-<style>
-
-/* Contact Form Styling */
-#contact {
-  padding: 4rem 1rem;
-  background-color: #0D2149;
-  text-align: center;
-}
-
-.contact-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.contact-form .form-group {
-  width: 100%;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.9rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.btn-submit {
-  background-color: #0D2149;
-  color: white;
-  border: none;
-  padding: 0.9rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-  background-color: #0D2149;
-}
-
-
-
-
-
-
-  
-</style>
-
-
-
 
   
 
@@ -122,8 +58,6 @@
     <!-- Link to the external JavaScript file -->
     <script src="countdown.js"></script>
 
-</body>
-</html>
 
 
 
@@ -171,42 +105,94 @@
 
       
       
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form with Link Detection</title>
+  <style>
+    /* Contact Form Styling */
+    #contact {
+      padding: 4rem 1rem;
+      background-color: #0D2149;
+      text-align: center;
+      color: white;
+      font-family: sans-serif;
+    }
 
-<!-- MAIN CONTENT -->
-<main class="container">
-  <section class="page-intro">
-    <h2>Project Submission</h2>
-  </section>
-  
-  
-  
-  <section id="contact" class="info-box">
-  <div class="container contact-container">
-    <form action="https://formspree.io/f/xzzawjyg" method="POST" class="contact-form">
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .contact-form .form-group {
+      width: 100%;
+    }
+
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+
+    .btn-submit {
+      background-color: #0D2149;
+      color: white;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #9C0D38;
+    }
+
+    /* Live Preview Styling */
+    .preview {
+      text-align: left;
+      background: white;
+      color: black;
+      padding: 1rem;
+      border-radius: 6px;
+      min-height: 120px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .highlight-link {
+      color: #9C0D38;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<section id="contact">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
       <div class="form-group">
-        <input type="text" name="team-name" placeholder="Team Name" required />
+        <textarea id="message" placeholder="Type your message, links will be auto-highlighted..."></textarea>
       </div>
-      <div class="form-group">
-        <input type="text" name="team-members" placeholder="Team Members (First & Last Names)" required />
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Your Email" required />
-      </div>
-      <div class="form-group">
-        <textarea name="project-link" placeholder="Project Link (GitHub, Glitch, etc.)" required></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Submit Project</button>
+      <div class="form-group preview" id="livePreview"></div>
+      <button type="submit" class="btn-submit">Send</button>
     </form>
   </div>
 </section>
-</main>
-
-
-
-
-
-
-
 
 
 
@@ -248,6 +234,22 @@
       a.classList.add('active');
     }
   });
+
+  const textarea = document.getElementById('message');
+  const preview = document.getElementById('livePreview');
+
+  textarea.addEventListener('input', () => {
+    const text = textarea.value;
+
+    // Regex to find URLs
+    const linkified = text.replace(
+      /(https?:\/\/[^\s]+)/g,
+      '<span class="highlight-link">$1</span>'
+    );
+
+    preview.innerHTML = linkified;
+  });
+  
 </script>
 
 </body>
