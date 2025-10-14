@@ -1,29 +1,34 @@
-const { DateTime } = require("luxon");
+// Ensure Luxon is loaded globally
+const { DateTime } = luxon;
 
+// Event date: Dec 6, 2025 at 10:00 AM Central Time
 const eventDate = DateTime.fromObject(
   { year: 2025, month: 12, day: 6, hour: 10, minute: 0 },
   { zone: 'America/Chicago' }
 ).toMillis();
 
-console.log(eventDate);
-const countdown = document.getElementById("countdown");
-
 function updateCountdown() {
-    const now = new Date().getTime();
-    const diff = eventDate - now;
+  const countdown = document.getElementById("countdown");
 
-    if (diff <= 0) {
-        countdown.innerHTML = "The event has started!";
-        return;
-    }
+  // Safety check in case the element is not found
+  if (!countdown) return;
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
+  const now = DateTime.now().toMillis();
+  const diff = eventDate - now;
 
-    countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  if (diff <= 0) {
+    countdown.innerHTML = "The event has started!";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
+// Call once immediately and then every second
 updateCountdown();
 setInterval(updateCountdown, 1000);
