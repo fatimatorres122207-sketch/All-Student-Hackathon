@@ -6,63 +6,95 @@
     <title>All Student Hackathon 2025</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- Page-specific styling & animations -->
     <style>
-        /* Smooth section flow */
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        header p {
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px 80px;
+        }
+
         section {
-            margin: 60px auto;
-            max-width: 1000px;
-            padding: 0 20px;
+            margin-top: 80px;
             animation: fadeUp 1s ease forwards;
         }
 
         h2 {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
         }
 
-        /* Gallery */
+        /* ===== Gallery ===== */
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            justify-items: center;
         }
 
         .photo-grid img {
             width: 100%;
-            max-width: 180px;
-            margin: auto;
-            border-radius: 6px;
+            max-width: 160px;
+            border-radius: 8px;
             opacity: 0;
             animation: popIn 0.8s ease forwards;
         }
 
-        /* staggered animation */
-        .photo-grid img:nth-child(1) { animation-delay: 0.1s; }
-        .photo-grid img:nth-child(2) { animation-delay: 0.2s; }
-        .photo-grid img:nth-child(3) { animation-delay: 0.3s; }
-        .photo-grid img:nth-child(4) { animation-delay: 0.4s; }
-        .photo-grid img:nth-child(5) { animation-delay: 0.5s; }
-        .photo-grid img:nth-child(6) { animation-delay: 0.6s; }
-        .photo-grid img:nth-child(7) { animation-delay: 0.7s; }
-        .photo-grid img:nth-child(8) { animation-delay: 0.8s; }
-        .photo-grid img:nth-child(9) { animation-delay: 0.9s; }
-        .photo-grid img:nth-child(10) { animation-delay: 1s; }
+        .photo-grid img:nth-child(n) {
+            animation-delay: calc(var(--i) * 0.1s);
+        }
 
-        /* Sponsors */
+        /* ===== Volunteers ===== */
+        .volunteer-box {
+            max-width: 700px;
+            margin: auto;
+            padding: 35px;
+            text-align: center;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.03);
+        }
+
+        /* ===== Sponsors ===== */
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+        }
+
         .sponsor {
             text-align: center;
-            margin: 40px 0;
+            padding: 30px 20px;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.02);
             opacity: 0;
             animation: fadeUp 1s ease forwards;
         }
 
         .sponsor-logo {
-            max-width: 140px;
-            margin-bottom: 10px;
+            max-width: 130px;
+            margin-bottom: 15px;
         }
 
-        /* Animations */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            opacity: 0.7;
+        }
+
+        /* ===== Animations ===== */
         @keyframes popIn {
             from {
                 transform: scale(0.9);
@@ -89,78 +121,86 @@
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>All Student Hackathon 2025</h1>
-        <p>Celebrating creativity, collaboration, and community</p>
-    </header>
+<header>
+    <h1>All Student Hackathon 2025</h1>
+    <p>A celebration of creativity, collaboration, and community impact.</p>
+</header>
 
-    <!-- Event Photo Gallery -->
+<main>
+
+    <!-- Gallery -->
     <section id="gallery">
-        <h2>Event Photos</h2>
+        <h2>Event Highlights</h2>
         <div class="photo-grid">
-            <img src="IM1.png" alt="Event photo 1">
-            <img src="IM2.png" alt="Event photo 2">
-            <img src="IM3.png" alt="Event photo 3">
-            <img src="IM4.png" alt="Event photo 4">
-            <img src="IM5.png" alt="Event photo 5">
-            <img src="IM6.png" alt="Event photo 6">
-            <img src="IM7.png" alt="Event photo 7">
-            <img src="IM8.png" alt="Event photo 8">
-            <img src="IM9.png" alt="Event photo 9">
-            <img src="IM10.png" alt="Event photo 10">
+            <img src="IM1.png" alt="Event photo 1" style="--i:1">
+            <img src="IM2.png" alt="Event photo 2" style="--i:2">
+            <img src="IM3.png" alt="Event photo 3" style="--i:3">
+            <img src="IM4.png" alt="Event photo 4" style="--i:4">
+            <img src="IM5.png" alt="Event photo 5" style="--i:5">
+            <img src="IM6.png" alt="Event photo 6" style="--i:6">
+            <img src="IM7.png" alt="Event photo 7" style="--i:7">
+            <img src="IM8.png" alt="Event photo 8" style="--i:8">
+            <img src="IM9.png" alt="Event photo 9" style="--i:9">
+            <img src="IM10.png" alt="Event photo 10" style="--i:10">
         </div>
     </section>
 
-    <!-- Volunteers Thank You -->
+    <!-- Volunteers -->
     <section id="volunteers">
-        <h2>Thank You, Volunteers 💙</h2>
-        <p style="text-align:center;">
-            Our volunteers were the heart of this event. Thank you for your time,
-            passion, and commitment to making the 2025 All Student Hackathon an
-            unforgettable experience.
-        </p>
+        <h2>Thank You to Our Volunteers</h2>
+        <div class="volunteer-box">
+            <p>
+                Our volunteers were the backbone of the 2025 All Student Hackathon.
+                From mentoring teams to organizing logistics, your dedication and
+                support made this event welcoming, inspiring, and successful.
+            </p>
+            <p><strong>We are endlessly grateful.</strong></p>
+        </div>
     </section>
 
     <!-- Sponsors -->
     <section id="sponsors">
         <h2>Our Sponsors</h2>
+        <div class="sponsor-grid">
 
-        <div class="sponsor">
-            <img src="girlswhocode_logo.png" alt="Girls Who Code Logo" class="sponsor-logo">
-            <h3>Girls Who Code</h3>
-            <p>Inspiring and supporting young women to pursue careers in technology.</p>
-        </div>
+            <div class="sponsor">
+                <img src="girlswhocode_logo.png" alt="Girls Who Code Logo" class="sponsor-logo">
+                <h3>Girls Who Code</h3>
+                <p>Closing the gender gap in technology through education, community, and empowerment.</p>
+            </div>
 
-        <div class="sponsor">
-            <img src="roseofsteel_logo.png" alt="Rose of Steel Logo" class="sponsor-logo">
-            <h3>Rose of Steel</h3>
-            <p>Empowering students through leadership, mentorship, and innovation.</p>
-        </div>
+            <div class="sponsor">
+                <img src="roseofsteel_logo.png" alt="Rose of Steel Logo" class="sponsor-logo">
+                <h3>Rose of Steel</h3>
+                <p>Supporting leadership, innovation, and inclusive opportunities in STEM.</p>
+            </div>
 
-        <div class="sponsor">
-            <img src="sundogfarms_logo.png" alt="SunDog Farms Logo" class="sponsor-logo">
-            <h3>SunDog Farms</h3>
-            <p>Supporting local communities and sustainable partnerships.</p>
-        </div>
+            <div class="sponsor">
+                <img src="sundogfarms_logo.png" alt="SunDog Farms Logo" class="sponsor-logo">
+                <h3>SunDog Farms</h3>
+                <p>Championing sustainable practices and strong community partnerships.</p>
+            </div>
 
-        <div class="sponsor">
-            <img src="elparaiso_logo.png" alt="El Paraiso Logo" class="sponsor-logo">
-            <h3>El Paraiso</h3>
-            <p>Keeping our participants energized with amazing food and support.</p>
-        </div>
+            <div class="sponsor">
+                <img src="elparaiso_logo.png" alt="El Paraiso Logo" class="sponsor-logo">
+                <h3>El Paraiso</h3>
+                <p>Fueling creativity and collaboration with amazing food and support.</p>
+            </div>
 
-        <div class="sponsor">
-            <img src="iowabig_logo.png" alt="Iowa BIG Logo" class="sponsor-logo">
-            <h3>Iowa BIG</h3>
-            <p>Connecting students to real-world, project-based learning experiences.</p>
+            <div class="sponsor">
+                <img src="iowabig_logo.png" alt="Iowa BIG Logo" class="sponsor-logo">
+                <h3>Iowa BIG</h3>
+                <p>Connecting students to real-world challenges through project-based learning.</p>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 All Student Hackathon</p>
-    </footer>
+</main>
+
+<footer>
+    <p>&copy; 2025 All Student Hackathon</p>
+</footer>
 
 </body>
 </html>
