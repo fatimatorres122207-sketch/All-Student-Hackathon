@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Student Hackathon 2025</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Page-specific styling & animations -->
+    <style>
+        /* Smooth section flow */
+        section {
+            margin: 60px auto;
+            max-width: 1000px;
+            padding: 0 20px;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Gallery */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            max-width: 180px;
+            margin: auto;
+            border-radius: 6px;
+            opacity: 0;
+            animation: popIn 0.8s ease forwards;
+        }
+
+        /* staggered animation */
+        .photo-grid img:nth-child(1) { animation-delay: 0.1s; }
+        .photo-grid img:nth-child(2) { animation-delay: 0.2s; }
+        .photo-grid img:nth-child(3) { animation-delay: 0.3s; }
+        .photo-grid img:nth-child(4) { animation-delay: 0.4s; }
+        .photo-grid img:nth-child(5) { animation-delay: 0.5s; }
+        .photo-grid img:nth-child(6) { animation-delay: 0.6s; }
+        .photo-grid img:nth-child(7) { animation-delay: 0.7s; }
+        .photo-grid img:nth-child(8) { animation-delay: 0.8s; }
+        .photo-grid img:nth-child(9) { animation-delay: 0.9s; }
+        .photo-grid img:nth-child(10) { animation-delay: 1s; }
+
+        /* Sponsors */
+        .sponsor {
+            text-align: center;
+            margin: 40px 0;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .sponsor-logo {
+            max-width: 140px;
+            margin-bottom: 10px;
+        }
+
+        /* Animations */
+        @keyframes popIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                transform: translateY(25px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Header -->
     <header>
         <h1>All Student Hackathon 2025</h1>
-        <p>Event Highlights & Appreciation</p>
+        <p>Celebrating creativity, collaboration, and community</p>
     </header>
 
     <!-- Event Photo Gallery -->
@@ -34,63 +114,47 @@
 
     <!-- Volunteers Thank You -->
     <section id="volunteers">
-        <h2>Thank You to Our Volunteers</h2>
-        <p>
-            A huge thank you to all of our incredible volunteers who dedicated their time,
-            energy, and skills to make the 2025 All Student Hackathon possible.
-            Your support truly made a difference!
+        <h2>Thank You, Volunteers 💙</h2>
+        <p style="text-align:center;">
+            Our volunteers were the heart of this event. Thank you for your time,
+            passion, and commitment to making the 2025 All Student Hackathon an
+            unforgettable experience.
         </p>
     </section>
 
-    <!-- Sponsors Section -->
+    <!-- Sponsors -->
     <section id="sponsors">
         <h2>Our Sponsors</h2>
 
         <div class="sponsor">
             <img src="girlswhocode_logo.png" alt="Girls Who Code Logo" class="sponsor-logo">
             <h3>Girls Who Code</h3>
-            <p>
-                Girls Who Code works to close the gender gap in technology by inspiring,
-                educating, and equipping young women with computing skills.
-            </p>
+            <p>Inspiring and supporting young women to pursue careers in technology.</p>
         </div>
 
         <div class="sponsor">
             <img src="roseofsteel_logo.png" alt="Rose of Steel Logo" class="sponsor-logo">
             <h3>Rose of Steel</h3>
-            <p>
-                Rose of Steel empowers students through mentorship, leadership,
-                and opportunities in STEM and innovation.
-            </p>
+            <p>Empowering students through leadership, mentorship, and innovation.</p>
         </div>
 
         <div class="sponsor">
             <img src="sundogfarms_logo.png" alt="SunDog Farms Logo" class="sponsor-logo">
             <h3>SunDog Farms</h3>
-            <p>
-                SunDog Farms supports local communities and sustainable practices,
-                helping make events like this possible.
-            </p>
+            <p>Supporting local communities and sustainable partnerships.</p>
         </div>
 
         <div class="sponsor">
             <img src="elparaiso_logo.png" alt="El Paraiso Logo" class="sponsor-logo">
             <h3>El Paraiso</h3>
-            <p>
-                El Paraiso provided support and delicious food that helped keep
-                participants energized throughout the event.
-            </p>
+            <p>Keeping our participants energized with amazing food and support.</p>
         </div>
 
         <div class="sponsor">
             <img src="iowabig_logo.png" alt="Iowa BIG Logo" class="sponsor-logo">
             <h3>Iowa BIG</h3>
-            <p>
-                Iowa BIG connects students to real-world, project-based learning
-                experiences that prepare them for future careers.
-            </p>
+            <p>Connecting students to real-world, project-based learning experiences.</p>
         </div>
-
     </section>
 
     <!-- Footer -->
@@ -100,4 +164,3 @@
 
 </body>
 </html>
-```
