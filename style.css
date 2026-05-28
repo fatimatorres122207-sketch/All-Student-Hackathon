@@ -4,13 +4,15 @@
 }
 
 body {
-  margin: 0;
-  color: white;
-  font-family: "Source Sans 3", sans-serif;
-  text-align: center;
-  background: linear-gradient(135deg, #9c0d38, #0d2149);
-  min-height: 100vh;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
+
+h1, h2, h3, h4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
 
 a {
   color: white;
@@ -63,14 +65,6 @@ a {
   border-radius: 28px;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 1px;
-  margin-top: 0;
-}
 
 h1 {
   font-size: clamp(3rem, 8vw, 6rem);
