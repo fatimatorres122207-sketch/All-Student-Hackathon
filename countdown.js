@@ -3,7 +3,7 @@ const { DateTime } = luxon;
 
 // Event date: Dec 6, 2025 at 10:00 AM Central Time
 const eventDate = DateTime.fromObject(
-  { year: 2026, month: 12, day: 6, hour: 10, minute: 0 },
+  { year: 2027, month: 5, day: 16, hour: 10, minute: 0 },
   { zone: 'America/Chicago' }
 ).toMillis();
 
