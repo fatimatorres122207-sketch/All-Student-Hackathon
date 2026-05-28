@@ -3,26 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join the All Student Hackathon in Cedar Rapids, IA. Compete, collaborate, and innovate with fellow coders!" />
+  <meta name="author" content="All Student Hackathon Team" />
+  <meta name="keywords" content="hackathon, all student, coding event, tech, Cedar Rapids, software, 2025, register" />
+  <meta property="og:title" content="All Student Hackathon" />
+  <meta property="og:description" content="Compete in the All Student Hackathon 2025 — a thrilling one-day hackathon for programmers and creators of all levels" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://googolgenius.github.io/all-student-hackathon-2025/" />
 
   <title>All Student Hackathon 2025</title>
-
-  <meta name="description" content="Join the All Student Hackathon in Cedar Rapids, IA. Compete, collaborate, and innovate with fellow students." />
-  <meta name="author" content="All Student Hackathon Team" />
-
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logo.png" type="image/x-icon" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+  <style>
+    #countdown {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  </style>
+
+
 </head>
-
 <body>
-  <header class="hero">
-    <a href="index.html" class="logo-container">
-      <img src="logo.png" alt="All Student Hackathon Logo" />
-    </a>
+  <!-- HEADER -->
 
+<header>
+  <div class="logo-container">
+    <a href="index.html" class="clearnav">
+      <img src="logo.png" alt="All Student Hackathon Logo" class="logo"/>
+    </a>
+  </div>
+
+
+
+
+
+
+  
+
+  
     <div class="container header-grid">
       <div class="brand">
         <h1>All Student Hackathon</h1>
@@ -40,18 +63,64 @@
 </center>
 <center>
 
-      <div id="countdown">Loading Countdown...</div>
 
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="schedule.html" class="nav-link">Schedule</a>
-        <a href="rubric.html" class="nav-link">Rubric</a>
-        <a href="register.html" class="nav-link">Register</a>
-        <a href="2025.html" class="nav-link">2025</a>
-      </nav>
+
+
+
+    <div id="countdown">Loading Countdown...</div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="countdown.js"></script>
+
+</body>
+</html>
+
+
+
+</center>
+
     </div>
-  </header>
 
+
+
+<nav class="nav">
+  <a href="index.html" class="nav-link cta">Home</a>
+  <a href="schedule.html" class="nav-link cta">Schedule</a>
+  <a href="rubric.html" class="nav-link cta">Rubric</a>
+  <a href="register.html" class="nav-link cta">Register</a>
+  <a href="2025.html" class="nav-link cta">2025</a>
+</nav>
+      
+</header>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
   <main>
     <section class="section-container card">
@@ -95,41 +164,56 @@
     </section>
   </main>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+ <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-grid">
-      <div class="footer-section">
-        <h3>All Student Hackathon</h3>
-        <p>
-          Empowering high school students through coding, innovation, and collaboration.
-        </p>
-      </div>
+    <div class="container footer-grid">
+      <div>
+        <p><strong>All Student Hackathon</strong></p>
+        <p>© <span id="year"></span> All Student Hackathon</p>
+    <div class="social">
 
-      <div class="footer-section">
-        <h4>Contact Us</h4>
-        <p><a href="mailto:allstudenthackathon@gmail.com">allstudenthackathon@gmail.com</a></p>
-        <p><a href="tel:+13194125364">(319) 412-5364</a></p>
+<a href="https://www.instagram.com/allstudenthackathon/?next=%2Fbridge.of.voices%2F" 
+   target="_blank" 
+   class="social-link">
+  Instagram
+</a>
+      
+  </div>
+        
       </div>
-
-      <div class="footer-section">
-        <h4>Follow Us</h4>
-        <p>
-          <a href="https://www.instagram.com/allstudenthackathon/" target="_blank">Instagram</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> All Student Hackathon. All rights reserved.</p>
     </div>
   </footer>
 
 
 
-
-
-
-
-
+  
 
   <script>
     // Footer year
@@ -145,4 +229,3 @@
   </script>
 </body>
 </html>
-
